@@ -1,0 +1,165 @@
+:root {
+    --azul: hsl(216, 100%, 17%)
+}
+
+* {
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Crimson Text', serif;
+}
+
+.header {
+    position: sticky;
+    width: 100%;
+    height: 80px;
+    background-color: royalblue;
+    top: 0;
+}
+
+#check {
+    display: none;
+}
+.checkbtn {
+    display: none;
+    float: right;
+    height: 100%;
+    min-width: 60px;
+    line-height: 80px;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.header__logo {
+    float: left;
+    height: 100%;
+    margin-left: 3%;
+    color: white;
+    font-size: 25px;
+    line-height: 80px;
+}
+
+.header__lista {
+    float: right;
+    height: 100%;
+    margin-right: 3%;
+}
+
+.header__lista-item {
+    display: inline-block;
+    height: 100%;
+    min-width: 70px;
+    line-height: 80px;
+}
+
+.header__lista-item a {
+    color: white;
+    padding: 14px;
+    transition: all .5s;
+}
+
+.contenido {
+    width: 90%;
+    /* height: 450px; */
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contenido__img{
+    width: 55%;
+    margin: auto;
+}
+
+.contenido__img img{
+    width: 100%;
+}
+
+.login {
+    background-color: rgba(128,128,128, 0.5);
+    width: 30%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: var(--azul);
+}
+
+.login h4 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.login__camp {
+    background-color: whitesmoke;
+    border: 1px solid var(--azul);
+    border-radius: 18px;
+    margin: 10px 0;
+}
+
+.login__camp input {
+    border: 0;
+    width: 80%;
+    margin: 8px auto;
+}
+
+.login__camp input:focus {
+    outline: 0;
+}
+
+.login__btnSubmit {
+    border: 0;
+    border-radius: 5px;
+    width: 40%;
+    margin: 12px auto;
+    padding: 10px;
+    cursor: pointer;
+    display: block;
+    background-color: var(--azul);
+    color: white;
+}
+
+.login__btnSubmit:hover,.login__btnSubmit:active {
+    opacity: .8;
+}
+
+.login__btnSubmit:focus {
+    outline: 0;
+}
+
+.login__forgot {
+    float: right;
+}
+
+@media(max-width:858px) {
+    .checkbtn {
+        display: block;
+    }
+}
+
+@media(max-width:411px) {
+    /* HEADER*/
+    .header__lista {
+        display: none;
+    }
+
+    /* CONTENIDO */
+    .contenido {
+        width: 95%;
+        margin: 15px auto;
+    }
+
+    .contenido__img {
+        width: 95%;
+        margin-bottom: 10px;
+    }
+
+    .login {
+        width: 95%;
+    }
+}
